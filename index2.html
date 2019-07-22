@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>若依</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/jquery.contextMenu.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/skins.css">
+		<link rel="stylesheet" href="css/ry-ui.css">
+		<link rel="stylesheet" href="./layui-v2.5.4/layui/css/layui.css">
+		<link rel="stylesheet" href="css/index2.css">
+	</head>
+<body class="fixed-sidebar full-height-layout gray-bg skin-blue" style="overflow: hidden;">
+<div id="wrapper">
+    <!--左侧导航开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close">
+            <i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="logo">
+				     <span class="logo-lg">RuoYi</span>
+            	</li>
+            	<li>
+            		<div class="user-panel">
+            			<a class="menuItem" title="个人中心" href="/system/user/profile"> 
+            				<div class="hide">个人中心</div>
+					        <div class="pull-left image">
+		                    	<img src="img/profile.gif" class="img-circle" alt="User Image">
+					        </div>
+				        </a>
+				        <div class="pull-left info">
+				          <p>admin</p>
+				          <a href="#"><i class="layui-icon layui-icon-face-smile text-success"></i> 在线</a>
+				          <a href="logout" style="padding-left:5px;"><i class="layui-icon layui-icon-face-cry text-danger"></i> 注销</a>
+				        </div>
+				    </div>
+            	</li>
+                 <li class="active">
+                    <a href="index.html"><i class="layui-icon layui-icon-home"></i> <span class="nav-label">主页</span> <span style="margin-left: 80px;" class="layui-icon layui-icon-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a class="menuItem" href="/system/main">了解若依</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">
+                		<i class="layui-icon layui-icon-set-fill"></i>
+                    	<span class="nav-label">系统管理</span> 
+                    	<span style="margin-left: 52px;" class="layui-icon layui-icon-down"></span>
+                	</a>
+                   <ul class="nav nav-second-level collapse">
+						<li>
+							<a class="" href="./UserManage.html">用户管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">角色管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">菜单管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">部门管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">岗位管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">字典管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">参数设置</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">通知公告</a>
+							
+						</li>
+						<li>
+							<a href="#">日志管理<span style="margin-left: 45px;" class="layui-icon layui-icon-down"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" href="">操作日志</a></li>
+								<li><a class="menuItem" href="">登录日志</a></li>
+							</ul>
+						</li>
+					</ul>
+                </li>
+                <li>
+                	<a href="#">
+                		<i class="layui-icon layui-icon-video"></i>
+                    	<span class="nav-label">系统监控</span> 
+                    	<span style="margin-left: 52px;" class="layui-icon layui-icon-down"></span>
+                	</a>
+                   <ul class="nav nav-second-level collapse">
+						<li>
+							<a class="menuItem" href="">在线用户</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">定时任务</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">数据监控</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">服务监控</a>
+							
+							
+						</li>
+					</ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2" style="color:#FFF;" href="#" title="收起菜单">
+                    	<i class="layui-icon layui-icon-shrink-right"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right welcome-message">
+				    <li><a title="视频教程" href="http://doc.ruoyi.vip/#/standard/spjc" target="_blank"><i class="layui-icon layui-icon-video"></i> 视频教程</a></li>
+                    <li><a title="开发文档" href="http://doc.ruoyi.vip" target="_blank"><i class="layui-icon layui-icon-help"></i> 开发文档</a></li>
+	                <li><a title="全屏显示" href="javascript:void(0)" id="fullScreen"><i class="layui-icon layui-icon-layer"></i> 全屏显示</a></li>
+                    <li class="dropdown user-menu">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-hover="dropdown">
+							<img src="img/profile.gif" class="user-image">
+							<span class="hidden-xs">若依</span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="mt5">
+								<a href="/system/user/profile" class="menuItem">
+								<i class="layui-icon layui-icon-friends"></i> 个人中心</a>
+							</li>
+							<li>
+								<a onclick="resetPwd()" class="menuItem">
+								<i class="layui-icon layui-icon-password"></i> 修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="logout">
+								<i class="layui-icon layui-icon-close"></i> 退出登录</a>
+							</li>
+						</ul>
+					</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="layui-icon layui-icon-prev"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active menuTab" data-id="/system/main">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="layui-icon layui-icon-next"></i>
+            </button>
+            <a href="#" class="roll-nav roll-right tabReload"><i class="layui-icon layui-icon-refresh"></i> 刷新</a>
+        </div>
+        
+        <a id="ax_close_max" class="ax_close_max" href="#" title="关闭全屏"> <i class="fa fa-times-circle-o"></i> </a>
+                    
+        <div class="row mainContent" id="content-main" style="overflow-y: scroll;">
+			<div class="divmian">
+				<pre class="a1">
+					<span class="a1kk"></span>
+					<p class="a2">领取阿里云通用云产品1888优惠券</p><br />
+					<p class="a2"><a href="#">https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=brki8iof</a></p><br />
+					<p class="a2">领取腾讯云通用云产品2860优惠券</p><br />
+					<p class="a2"><a href="">https://cloud.tencent.com/redirect.php?redirect=1025&cps_key=198c8df2ed259157187173bc7f4f32fd&from=console</a></p><br />
+					<p class="a2">阿里云Hi拼购 限量爆款 低至199元/年</p><br />
+					<p class="a2"><a href="#">https://www.aliyun.com/acts/hi-group-buying?userCode=brki8iof</a></p><br />
+					<p class="a2">云产品通用红包，可叠加官网常规优惠使用。(仅限新用户)</p>
+				</pre>
+				<div class="layui-row layui-col-space1">
+					<div class="layui-col-md4" style="margin-top: 30px;">
+						<h1 class="sao">hello,Guest</h1>
+						<p class="saoma">移动设备访问请扫描以下二维码:</p>
+						<img src="img/erweima.gif" alt="" class="erweima">
+					</div>
+					<div class="layui-col-md4" style="margin-top: 30px;">
+						<h1 class="ruoyi">若依后台管理框架</h1>
+						<div class="houtai">一直想做一款后台管理系统，看了很多优秀的开源项目但是发现没有合适自己的。
+							于是利用空闲休息时间开始自己写一套后台系统。如此有了若依管理系统。，她可以用于所有的Web应用程序，
+							如<strong>网站管理后台</strong>，<strong>网站会员中心</strong>，<strong>CMS</strong>，<strong>CRM</strong>，<strong>OA</strong>等等，
+							当然，您也可以对她进行深度定制，以做出更强系统。
+							所有前端后台代码封装过后十分精简易上手，出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
+						</div>
+						<div class="guanli"><strong>当前版本：</strong>v4.0.0</div>
+						<div style="float: left; width: 100%;"><span class="kuangjia">￥免费开源</span></div>
+						<div style="float: left; width: 100%; margin-top: 27px;">
+						<button class="mayun"><i class="layui-icon layui-icon-senior" style="margin-right: 3px;"></i>访问码云</button>
+						<button class="zhuye"><i class="layui-icon layui-icon-home" style="margin-right: 3px;"></i>访问主页</button>
+						</div>
+					</div>
+					<div class="layui-col-md4" style="margin-top: 26px;">
+						<h4 class="jishu"><strong>技术类型:</strong></h4>
+						<p class="lei">1.核心框架：Spring Boot。</p><br>
+						<p class="lei">2.安全框架：Apache Shiro。</p><br>
+						<p class="lei">3.模板引擎：Thymeleaf。</p><br>
+						<p class="lei">4.持久层框架：MyBatis。</p><br>
+						<p class="lei">5.定时任务:Quartz。</p><br>
+						<p class="lei">6.数据库连接池：Druid。</p><br>
+						<p class="lei">7.工具类：Fastjson。</p><br>
+						<p class="lei">8.更多……</p><br>
+					</div>
+				</div>
+			</div>
+			<div class="dvmian">
+				<div class="layui-row layui-col-space10">
+					<div class="layui-col-md4">
+						<div class="lianxi">
+							<div class="xinxi">联系信息</div>
+							<div class="ibox-content">
+									<p><i class="layui-icon layui-icon-release"></i> 官网：
+										<a href="http://www.ruoyi.vip" target="_blank">http://www.ruoyi.vip</a>
+									</p><br/>
+									<p><i class="layui-icon layui-icon-login-qq"></i> QQ群
+										<s>满1389287</s>
+										<s>满1679294</s>
+										<s>满1529866</s>
+										<s>满1772718</s>
+										<s>满1366522</s>
+										<a href="https://jq.qq.com/?_wv=1027&k=5Ofd4Pb" target="_blank">1382251</a>
+									</p><br/>
+									<p><i class="layui-icon layui-icon-login-qq"></i> 微信：
+										<a href="javascript:;">/ *<span style="color: #337ab7;">若依</span>
+										</a>
+									</p><br/>
+									<p><i class="layui-icon layui-icon-chart-screen"></i> 支付宝：
+										<a href="javascript:;" class="支付宝信息">/ *
+											<span style="color: #337ab7;">若依</span>
+										</a>
+									</p>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md4">
+						<div class="lianxi">
+							<div class="xinxi gengxin">更新日志</div>
+							<div class="layui-collapse">
+								<div class="layui-colla-item">
+									<h2 class="layui-colla-title">V4.0.0</h2>
+									<div class="layui-colla-content layui-show">
+										1.代码生成支持自定义编辑属性<br>
+										2.添加防止表单重复提交注解<br>
+										3.添加后端校验（和前端保持一致）<br>
+										4.新增同一个用户最大会话数控制<br>
+										5.Excel导出子对象支持多个字段<br>
+										6.定时任务支持静态调用和多参数<br>
+										7.定时任务增加分组条件查询<br>
+										8.字典类型增加任务分组数据<br>
+										9.新增表格是否首次加载数据<br>
+										10.新增parentTab选项卡可在同一页签打开<br>
+										11.部门及以下数据权限（调整为以下及所有子节点）<br>
+										12.新增角色数据权限配（仅本人数据权限）<br>
+										13.修改菜单权限显示问题<br>
+										14.上传文件修改路径及返回名称<br>
+										15.添加报表插件及示例<br>
+										16.添加首页统计模板<br>
+										17.添加表格拖拽示例<br>
+										18.添加卡片列表示例<br>
+										19.添加表格动态增删改查示例<br>
+										20.添加用户页面岗位选择框提示<br>
+										21.点击菜单操作添加背景高亮显示<br>
+										22.表格树新增showSearch是否显示检索信息<br>
+										23.解决表格列设置sortName无效问题<br>
+										24.表格图片预览支持自定义设置宽高<br>
+										25.添加表格列浮动提示（单击文本复制）<br>
+										26.PC端收起菜单后支持浮动显示<br>
+										27.详细操作样式调整<br>
+										28.修改用户更新描述空串不更新问题<br>
+										29.导入修改为模板渲染<br>
+										30.修改菜单及部门排序规则<br>
+										31.角色导出数据范围表达式翻译<br>
+										32.添加summernote富文本字体大小<br>
+										33.优化表格底部下边框防重叠&汇总像素问题<br>
+										34.树表格支持属性多层级访问<br>
+										35.修复IE浏览器用户管理界面右侧留白问题<br>
+										36.重置按钮刷新表格<br>
+										37.重置密码更新用户缓存<br>
+										38.优化验证码属性参数<br>
+										39.其他细节优化<br>
+									</div>
+								</div>
+								<div class="layui-colla-item">
+									<h2 class="layui-colla-title">李清照</h2>
+									<div class="layui-colla-content layui-show">内容区域</div>
+								</div>
+								<div class="layui-colla-item">
+									<h2 class="layui-colla-title">鲁迅</h2>
+									<div class="layui-colla-content layui-show">内容区域</div>
+								</div>
+							</div>
+						</div>								
+					</div>
+					<div class="layui-col-md4">
+						<div class="juanzeng">
+							<div class="xinxi">捐赠</div>
+							<div class="ibox-content">
+								<div class="fukuan">请作者喝杯咖啡（点击图片放大）</div>
+								<div class="zleft">
+									<span>支付宝扫一扫，向我付款</span>
+									<img src="./img/zhifubao.gif" alt="" class="zhifubao">
+								</div>
+								<div class="zright">
+									<span>微信扫一扫</span>
+									<img src="./img/zhifubao.gif" alt="" class="zhifubao">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">© 2019 RuoYi Copyright </div>
+        </div>
+    </div>
+    <!--右侧部分结束-->
+</div>
+</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.metisMenu.js"></script>
+	<script src="js/jquery.slimscroll.min.js"></script>
+	<script src="js/jquery.contextMenu.min.js"></script>
+	<script src="js/jquery.blockUI.js"></script>
+	<script src="js/layer.min.js"></script>
+	<script src="js/ry-ui.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.fullscreen.js"></script>
+	<script src="./layui-v2.5.4/layui/lay/modules/code.js"></script>
+	<script src="./layui-v2.5.4/layui/layui.js"></script>
+	<script>
+		layui.use('element', function(){
+		var element = layui.element;
+		});
+	</script>
+</html>

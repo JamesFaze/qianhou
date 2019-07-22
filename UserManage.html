@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>若依</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/jquery.contextMenu.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/skins.css">
+		<link rel="stylesheet" href="css/ry-ui.css">
+		<link rel="stylesheet" href="./layui-v2.5.4/layui/css/layui.css">
+		<link rel="stylesheet" href="css/index3.css">
+	</head>
+<body class="fixed-sidebar full-height-layout gray-bg skin-blue" style="overflow: hidden;">
+<div id="wrapper">
+    <!--左侧导航开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close">
+            <i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="logo">
+				     <span class="logo-lg">RuoYi</span>
+            	</li>
+            	<li>
+            		<div class="user-panel">
+            			<a class="menuItem" title="个人中心" href="/system/user/profile"> 
+            				<div class="hide">个人中心</div>
+					        <div class="pull-left image">
+		                    	<img src="img/profile.gif" class="img-circle" alt="User Image">
+					        </div>
+				        </a>
+				        <div class="pull-left info">
+				          <p>admin</p>
+				          <a href="#"><i class="layui-icon layui-icon-face-smile text-success"></i> 在线</a>
+				          <a href="logout" style="padding-left:5px;"><i class="layui-icon layui-icon-face-cry text-danger"></i> 注销</a>
+				        </div>
+				    </div>
+            	</li>
+                 <li class="active">
+                    <a href="index.html"><i class="layui-icon layui-icon-home"></i> <span class="nav-label">主页</span> <span style="margin-left: 80px;" class="layui-icon layui-icon-down"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a class="" href="./index2.html">了解若依</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">
+                		<i class="layui-icon layui-icon-set-fill"></i>
+                    	<span class="nav-label">系统管理</span> 
+                    	<span style="margin-left: 52px;" class="layui-icon layui-icon-down"></span>
+                	</a>
+                   <ul class="nav nav-second-level collapse">
+						<li>
+							<a class="" href="./UserManage.html">用户管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">角色管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">菜单管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">部门管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">岗位管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">字典管理</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">参数设置</a>
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">通知公告</a>
+							
+						</li>
+						<li>
+							<a href="#">日志管理<span style="margin-left: 45px;" class="layui-icon layui-icon-down"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" href="">操作日志</a></li>
+								<li><a class="menuItem" href="">登录日志</a></li>
+							</ul>
+						</li>
+					</ul>
+                </li>
+                <li>
+                	<a href="#">
+                		<i class="layui-icon layui-icon-video"></i>
+                    	<span class="nav-label">系统监控</span> 
+                    	<span style="margin-left: 52px;" class="layui-icon layui-icon-down"></span>
+                	</a>
+                   <ul class="nav nav-second-level collapse">
+						<li>
+							<a class="menuItem" href="">在线用户</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">定时任务</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">数据监控</a>
+							
+							
+						</li>
+						<li>
+							<a class="menuItem" href="">服务监控</a>
+							
+							
+						</li>
+					</ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2" style="color:#FFF;" href="#" title="收起菜单">
+                    	<i class="layui-icon layui-icon-shrink-right"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right welcome-message">
+				    <li><a title="视频教程" href="http://doc.ruoyi.vip/#/standard/spjc" target="_blank"><i class="layui-icon layui-icon-video"></i> 视频教程</a></li>
+                    <li><a title="开发文档" href="http://doc.ruoyi.vip" target="_blank"><i class="layui-icon layui-icon-help"></i> 开发文档</a></li>
+	                <li><a title="全屏显示" href="javascript:void(0)" id="fullScreen"><i class="layui-icon layui-icon-layer"></i> 全屏显示</a></li>
+                    <li class="dropdown user-menu">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-hover="dropdown">
+							<img src="img/profile.gif" class="user-image">
+							<span class="hidden-xs">若依</span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="mt5">
+								<a href="/system/user/profile" class="menuItem">
+								<i class="layui-icon layui-icon-friends"></i> 个人中心</a>
+							</li>
+							<li>
+								<a onclick="resetPwd()" class="menuItem">
+								<i class="layui-icon layui-icon-password"></i> 修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="logout">
+								<i class="layui-icon layui-icon-close"></i> 退出登录</a>
+							</li>
+						</ul>
+					</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left tabLeft">
+                <i class="layui-icon layui-icon-prev"></i>
+            </button>
+            <nav class="page-tabs menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active menuTab" data-id="/system/main">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right tabRight">
+                <i class="layui-icon layui-icon-next"></i>
+            </button>
+            <a href="#" class="roll-nav roll-right tabReload"><i class="layui-icon layui-icon-refresh"></i> 刷新</a>
+        </div>
+        
+        <a id="ax_close_max" class="ax_close_max" href="#" title="关闭全屏"> <i class="fa fa-times-circle-o"></i> </a>
+                    
+        <div class="row mainContent" id="content-main" style="overflow-y: scroll;">
+            <div class="divmain">
+                <div class="z_left">
+                    <div class="zz">
+                        组织机构
+                        <i class="layui-icon layui-icon-survey"></i>
+                        <i class="layui-icon layui-icon-down"></i>
+                        <i class="layui-icon layui-icon-refresh-1"></i>
+                    </div>
+                    <div id="test1" class="wo"></div>
+                </div>
+                <div class="z_right">
+                    <div class="k1" style="height: 56px;">
+                        <form class="layui-form" action="" lay-filter="example">
+                            <div style="float: left">
+                                <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
+                                    <label class="layui-form-label" style="width:100px;">登录名称:</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入账号" class="layui-input" style="width: 198px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: left">
+                                <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
+                                    <label class="layui-form-label" style="width:100px;">手机号码:</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入手机号码" class="layui-input" style="width: 198px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: left">
+                                <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
+                                    <label class="layui-form-label" style="width:100px;">用户状态</label>
+                                    <div class="layui-input-inline">
+                                        <select name="quiz1">
+                                        <option value="" selected="">所有</option>
+                                        <option value="">在线</option>
+                                        <option value="">离线</option>
+                                        <option value="">隐身</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: left">
+                                <div class="layui-form-item" style="margin-top: 8px;margin-left: -10px;">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label" style="width:100px;">创建时间</label>
+                                        <div class="layui-input-inline" style="width: 100px;">
+                                        <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-form-mid">-</div>
+                                        <div class="layui-input-inline" style="width: 100px;">
+                                        <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: left">
+                                <button class="layui-btn layui-btn-radius" style="margin-top: 8px;">
+                                    <i class="layui-icon layui-icon-search"></i>
+                                    搜索
+                                </button>     
+                            </div>
+                            <div style="float: left">
+                                    <button class="layui-btn layui-btn-radius layui-btn-warm" style="margin-top: 8px;margin-left: 5px;">
+                                        <i class="layui-icon layui-icon-refresh"></i>
+                                        搜索
+                                    </button>     
+                                </div>
+                        </form>
+                    </div>
+                    <div class="k1">
+                        <div class="layui-btn-group" style="margin: 18px 0 0 15px;">
+                            <button type="button" class="layui-btn" style="background: #1c84c6">
+                                <i class="layui-icon layui-icon-add-1"></i>增加
+                            </button>
+                            <button type="button" class="layui-btn" style="background: #6dd9c3">
+                                <i class="layui-icon layui-icon-survey"></i>修改
+                            </button>
+                            <button type="button" class="layui-btn" style="background: #f59da6">
+                                <i class="layui-icon layui-icon-close"></i>删除
+                            </button>
+                            <button type="button" class="layui-btn" style="background: #23c6c8">
+                                <i class="layui-icon layui-icon-upload-drag"></i>导入
+                            </button>
+                            <button type="button" class="layui-btn" style="background: #f8ac59">
+                                <i class="layui-icon layui-icon-download-circle"></i>导出
+                            </button>
+                        </div>
+                        <div class="layui-btn-group" style="margin: 15px 15px 0 0; float: right;">
+                            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                <i class="layui-icon">&#xe615;</i>
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                <i class="layui-icon">&#xe669;</i>
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                <i class="layui-icon">&#xe60a;</i>
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                <i class="layui-icon">&#xe62a;&#xe625;</i>
+                            </button>
+                        </div>
+                        <table class="layui-hide" id="demo"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="pull-right">© 2019 RuoYi Copyright </div>
+        </div>
+    </div>
+    <!--右侧部分结束-->
+</div>
+</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.metisMenu.js"></script>
+	<script src="js/jquery.slimscroll.min.js"></script>
+	<script src="js/jquery.contextMenu.min.js"></script>
+	<script src="js/jquery.blockUI.js"></script>
+	<script src="js/layer.min.js"></script>
+	<script src="js/ry-ui.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.fullscreen.js"></script>
+	<script src="./layui-v2.5.4/layui/lay/modules/code.js"></script>
+    <script src="./layui-v2.5.4/layui/layui.js"></script>
+    <script>
+        layui.use('tree', function(){
+            var tree = layui.tree;
+            
+            //渲染
+            var inst1 = tree.render({
+            elem: '#test1'  //绑定元素
+            ,data: [{
+                title: '若依科技' //一级菜单
+                ,children: [{
+                title: '深圳总公司' //二级菜单
+                ,children: [{
+                    title: '研发部门',//三级菜单
+                },{
+                    title: '市场部门',//三级菜单
+                },{
+                    title: '测试部门',//三级菜单
+                },{
+                    title: '财务部门',//三级菜单
+                },{
+                    title: '运维部门',//三级菜单
+                }]
+                }]
+            },{
+                title: '长沙分公司' //一级菜单
+                ,children: [{
+                title: '市场部门',
+                title: '财务部门' //二级菜单
+                }]
+            }]
+            });
+        });
+        layui.use('table', function(){
+            var table = layui.table;
+            
+            //展示已知数据
+            table.render({
+                elem: '#demo'
+                ,cols: [[ //标题栏
+                {field: 'id', title: 'ID', width: 80, sort: true}
+                ,{field: 'username', title: '用户名', width: 120}
+                ,{field: 'email', title: '邮箱', minWidth: 150}
+                ,{field: 'sign', title: '签名', minWidth: 160}
+                ,{field: 'sex', title: '性别', width: 80}
+                ,{field: 'city', title: '城市', width: 100}
+                ,{field: 'experience', title: '积分', width: 80, sort: true}
+                ]]
+                ,data: [{
+                "id": "10001"
+                ,"username": "杜甫"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "116"
+                ,"ip": "192.168.0.8"
+                ,"logins": "108"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10002"
+                ,"username": "李白"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "12"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                ,"LAY_CHECKED": true
+                }, {
+                "id": "10003"
+                ,"username": "王勃"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "65"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10004"
+                ,"username": "贤心"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "666"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10005"
+                ,"username": "贤心"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "86"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10006"
+                ,"username": "贤心"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "12"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10007"
+                ,"username": "贤心"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "16"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }, {
+                "id": "10008"
+                ,"username": "贤心"
+                ,"email": "xianxin@layui.com"
+                ,"sex": "男"
+                ,"city": "浙江杭州"
+                ,"sign": "人生恰似一场修行"
+                ,"experience": "106"
+                ,"ip": "192.168.0.8"
+                ,"logins": "106"
+                ,"joinTime": "2016-10-14"
+                }]
+                //,skin: 'line' //表格风格
+                ,even: true
+                ,page: true //是否显示分页
+                //,limits: [5, 7, 10]
+                //,limit: 5 //每页默认显示的数量
+            });
+        });
+    </script>
+</html>
