@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="css/skins.css">
 		<link rel="stylesheet" href="css/ry-ui.css">
 		<link rel="stylesheet" href="./layui-v2.5.4/layui/css/layui.css">
-		<link rel="stylesheet" href="css/index3.css">
+		<link rel="stylesheet" href="css/index4.css">
 	</head>
 <body class="fixed-sidebar full-height-layout gray-bg skin-blue" style="overflow: hidden;">
 <div id="wrapper">
@@ -173,7 +173,7 @@
             </button>
             <nav class="page-tabs menuTabs">
                 <div class="page-tabs-content">
-                    <a href="javascript:;" class="active menuTab" data-id="/system/main">用户管理</a>
+                    <a href="javascript:;" class="active menuTab" data-id="/system/main">登录日志</a>
                 </div>
             </nav>
             <button class="roll-nav roll-right tabRight">
@@ -186,22 +186,12 @@
                     
         <div class="row mainContent" id="content-main" style="overflow-y: scroll;">
             <div class="divmain">
-                <div class="z_left" id="aa">
-                    <div class="zz">
-                        组织机构
-                        <i class="layui-icon layui-icon-survey"></i>
-                        <i class="layui-icon layui-icon-down"></i>
-                        <i class="layui-icon layui-icon-refresh-1"></i>
-                    </div>
-                    <div id="test1" class="wo"></div>
-                </div>
-                <div class="biank"><i class="layui-icon layui-icon-triangle-r" id="bb"></i></div>
                 <div class="z_right">
                     <div class="k1" style="height: 56px;">
                         <form class="layui-form" action="" lay-filter="example">
                             <div style="float: left">
                                 <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
-                                    <label class="layui-form-label" style="width:100px;">登录名称:</label>
+                                    <label class="layui-form-label" style="width:100px;">登录地址:</label>
                                     <div class="layui-input-block">
                                         <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入账号" class="layui-input" style="width: 198px;">
                                     </div>
@@ -209,7 +199,7 @@
                             </div>
                             <div style="float: left">
                                 <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
-                                    <label class="layui-form-label" style="width:100px;">手机号码:</label>
+                                    <label class="layui-form-label" style="width:100px;">登录名称:</label>
                                     <div class="layui-input-block">
                                         <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入手机号码" class="layui-input" style="width: 198px;">
                                     </div>
@@ -217,9 +207,9 @@
                             </div>
                             <div style="float: left">
                                 <div class="layui-form-item" style="margin-top: 8px; margin-left: -10px;">
-                                    <label class="layui-form-label" style="width:100px;">用户状态</label>
+                                    <label class="layui-form-label" style="width:100px;">登录状态:</label>
                                     <div class="layui-input-inline">
-                                        <select name="quiz1">
+                                        <select name="quiz1" style="margin-left: -10px;">
                                         <option value="" selected="">所有</option>
                                         <option value="">在线</option>
                                         <option value="">离线</option>
@@ -231,13 +221,13 @@
                             <div style="float: left">
                                 <div class="layui-form-item" style="margin-top: 8px;margin-left: -10px;">
                                     <div class="layui-inline">
-                                        <label class="layui-form-label" style="width:100px;">创建时间</label>
+                                        <label class="layui-form-label" style="width:100px;">登录时间:</label>
                                         <div class="layui-input-inline" style="width: 100px;">
-                                        <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input">
+                                        <input type="text" name="price_min" placeholder="开始时间" autocomplete="off" class="layui-input">
                                         </div>
                                         <div class="layui-form-mid">-</div>
                                         <div class="layui-input-inline" style="width: 100px;">
-                                        <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input">
+                                        <input type="text" name="price_max" placeholder="结束时间" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                 </div>
@@ -258,18 +248,12 @@
                     </div>
                     <div class="k1">
                         <div class="layui-btn-group" style="margin: 18px 0 0 15px;">
-                            <button type="button" class="layui-btn" style="background: #1c84c6">
-                                <i class="layui-icon layui-icon-add-1"></i>增加
-                            </button>
-                            <button type="button" class="layui-btn" style="background: #6dd9c3">
-                                <i class="layui-icon layui-icon-survey"></i>修改
-                            </button>
-                            <button type="button" class="layui-btn" style="background: #f59da6">
-                                <i class="layui-icon layui-icon-close"></i>删除
-                            </button>
-                            <button type="button" class="layui-btn" style="background: #23c6c8">
-                                <i class="layui-icon layui-icon-upload-drag"></i>导入
-                            </button>
+                                <button type="button" class="layui-btn" style="background: #f59da6">
+                                    <i class="layui-icon layui-icon-close"></i>删除
+                                </button>
+                                <button type="button" class="layui-btn" style="background: #ed5565">
+                                    <i class="layui-icon layui-icon-unlink"></i>清空
+                                </button>
                             <button type="button" class="layui-btn" style="background: #f8ac59">
                                 <i class="layui-icon layui-icon-download-circle"></i>导出
                             </button>
@@ -288,7 +272,7 @@
                                 <i class="layui-icon">&#xe62a;&#xe625;</i>
                             </button>
                         </div>
-                        <table class="layui-hide" id="demo"></table>
+                        <table class="layui-hide" id="test" lay-filter="test"></table>
  
                         <script type="text/html" id="toolbarDemo">
                             <div class="layui-btn-container">
@@ -296,13 +280,11 @@
                                 <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
                                 <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
                             </div>
-                        </script>
-                        
-                        <script type="text/html" id="barDemo">
+                            </script>
+                            <script type="text/html" id="barDemo">
                             <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
                         </script>
-
                     </div>
                 </div>
             </div>
@@ -327,136 +309,51 @@
 	<script src="./layui-v2.5.4/layui/lay/modules/code.js"></script>
     <script src="./layui-v2.5.4/layui/layui.js"></script>
     <script>
-       layui.use('table', function(){
+        layui.use('table', function(){
   var table = layui.table;
   
-  //展示已知数据
   table.render({
-    elem: '#demo'
-    ,cols: [[ //标题栏
-      {field: 'id', title: 'ID', width: 80, sort: true}
-      ,{field: 'username', title: '用户名', width: 120}
-      ,{field: 'email', title: '邮箱', minWidth: 150}
-      ,{field: 'sign', title: '签名', minWidth: 160}
-      ,{field: 'sex', title: '性别', width: 80}
-      ,{field: 'city', title: '城市', width: 100}
-      ,{field: 'experience', title: '积分', width: 80, sort: true}
+    elem: '#test'
+    ,url:'/test/table/demo1.json'
+    ,toolbar: '#toolbarDemo'
+    ,title: '用户数据表'
+    ,totalRow: true
+    ,cols: [[
+      {type: 'checkbox', fixed: 'left'}
+      ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计'}
+      ,{field:'username', title:'用户名', width:120, edit: 'text'}
+      ,{field:'email', title:'邮箱', width:150, edit: 'text', templet: function(res){
+        return '<em>'+ res.email +'</em>'
+      }}
+      ,{field:'experience', title:'积分', width:80, sort: true, totalRow: true}
+      ,{field:'sex', title:'性别', width:80, edit: 'text', sort: true}
+      ,{field:'logins', title:'登入次数', width:100, sort: true, totalRow: true}
+      ,{field:'sign', title:'签名'}
+      ,{field:'city', title:'城市', width:100}
+      ,{field:'ip', title:'IP', width:120}
+      ,{field:'joinTime', title:'加入时间', width:120}
+      ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
     ]]
-    ,data: [{
-      "id": "10001"
-      ,"username": "杜甫"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "116"
-      ,"ip": "192.168.0.8"
-      ,"logins": "108"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10002"
-      ,"username": "李白"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "12"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-      ,"LAY_CHECKED": true
-    }, {
-      "id": "10003"
-      ,"username": "王勃"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "65"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10004"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "666"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10005"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "86"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10006"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "12"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10007"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "16"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10008"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "106"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }]
-    //,skin: 'line' //表格风格
-    ,even: true
-    ,page: true //是否显示分页
-    //,limits: [5, 7, 10]
-    //,limit: 5 //每页默认显示的数量
+    ,page: true
+  });
+  
+  //工具栏事件
+  table.on('toolbar(test)', function(obj){
+    var checkStatus = table.checkStatus(obj.config.id);
+    switch(obj.event){
+      case 'getCheckData':
+        var data = checkStatus.data;
+        layer.alert(JSON.stringify(data));
+      break;
+      case 'getCheckLength':
+        var data = checkStatus.data;
+        layer.msg('选中了：'+ data.length + ' 个');
+      break;
+      case 'isAll':
+        layer.msg(checkStatus.isAll ? '全选': '未全选')
+      break;
+    };
   });
 });
-
-        window.onload=function(){
-        var aaa=document.getElementById('aa');
-        var bbb=document.getElementById('bb');
-        bbb.onmouseover=function() {
-            bbb.style.background = "red";
-        }
-        bbb.onmouseout=function() {
-            bbb.style.background = "#eeeeee";
-        }
-        bbb.onclick=function(){
-                if(aaa.style.display=='block'){ // == 判断div.display是否为显示
-                    aaa.style.display='none'; //= 赋值也可了解成改变
-                    }
-                    else{
-                        aaa.style.display='block';
-                    }
-            }
-        };
     </script>
 </html>
