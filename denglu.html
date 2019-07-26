@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录若依</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index1.css">
+  <link rel="stylesheet" href="./layui-v2.5.4/layui/css/layui.css">
+  <script src="./layui-v2.5.4/layui/layui.js"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="bg_img">
+      <div class="juzhong">
+        <div class="Jleft">
+            <img src="img/ruoyi.gif" alt="" class="ruoyi">
+            <ul>
+              <li class="li1"><strong>欢迎使用&nbsp;若依&nbsp;后台管理系统</strong></li>
+              <li class="li2 bj"><span class="li2_bg"></span>SpringBoot</li>
+              <li class="li2"><span class="li2_bg"></span>Mybatis</li>
+              <li class="li2"><span class="li2_bg"></span>Shiro</li>
+              <li class="li2"><span class="li2_bg"></span>Thymeleaf</li>
+              <li class="li2"><span class="li2_bg"></span>Bootstrap</li>
+              <li class="li3">还没有账号？<a href="#">立即注册&ge;&ge;</a></li>
+            </ul>
+        </div>
+        <div class="Jright">
+          <div class="kk">
+            <ul>
+              <li class="c1 c1bj"><strong>登录:</strong></li>
+              <li class="c1 bj">你若不离不弃，我必生死相依</li>
+              <li class="ubj1">
+                <input type="text"
+                 name="title" 
+                 required lay-verify="required" 
+                 value="admin" 
+                 autocomplete="off" 
+                 class="layui-input"
+                 style="width: 231px; height: 32px;"
+                >
+                <span class="c2 c2bg1"></span>
+              </li>
+              <li class="ubj1">
+                  <input 
+                        type="text"
+                        name="title" 
+                        required lay-verify="required" 
+                        value="admin" 
+                        autocomplete="off" 
+                        class="layui-input"
+                        style="width: 231px; height: 32px;"
+                  >
+                  <span class="c2 c2bg2"></span>
+                </li>
+                <li class="ubj1">
+                    <input 
+                          type="text" 
+                          name="title" 
+                          required lay-verify="required" 
+                          placeholder="验证码" 
+                          autocomplete="off" 
+                          class="layui-input"
+                          style=" float:left; width: 100px; height: 32px;"
+                    >
+                    <img src="./img/yanzhengma.gif" alt="" class="bj1img">
+                </li>
+                <li class="ubj1"><input type="checkbox" name="" title="发呆" style="float: left; width: 16px; height: 15px; margin-top: 3px;"><span class="c3">记住我</span></li>
+                <li class="btubj">
+                  <input type="button" class="layui-btn layui-btn-normal" style="float: left; width: 233px; height: 34px;" value="登录">
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

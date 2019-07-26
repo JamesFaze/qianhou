@@ -289,20 +289,6 @@
                             </button>
                         </div>
                         <table class="layui-hide" id="demo"></table>
- 
-                        <script type="text/html" id="toolbarDemo">
-                            <div class="layui-btn-container">
-                                <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
-                                <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
-                                <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
-                            </div>
-                        </script>
-                        
-                        <script type="text/html" id="barDemo">
-                            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-                        </script>
-
                     </div>
                 </div>
             </div>
@@ -324,121 +310,44 @@
 	<script src="js/ry-ui.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.fullscreen.js"></script>
-	<script src="./layui-v2.5.4/layui/lay/modules/code.js"></script>
     <script src="./layui-v2.5.4/layui/layui.js"></script>
     <script>
        layui.use('table', function(){
-  var table = layui.table;
-  
-  //展示已知数据
-  table.render({
-    elem: '#demo'
-    ,cols: [[ //标题栏
-      {field: 'id', title: 'ID', width: 80, sort: true}
-      ,{field: 'username', title: '用户名', width: 120}
-      ,{field: 'email', title: '邮箱', minWidth: 150}
-      ,{field: 'sign', title: '签名', minWidth: 160}
-      ,{field: 'sex', title: '性别', width: 80}
-      ,{field: 'city', title: '城市', width: 100}
-      ,{field: 'experience', title: '积分', width: 80, sort: true}
-    ]]
-    ,data: [{
-      "id": "10001"
-      ,"username": "杜甫"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "116"
-      ,"ip": "192.168.0.8"
-      ,"logins": "108"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10002"
-      ,"username": "李白"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "12"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-      ,"LAY_CHECKED": true
-    }, {
-      "id": "10003"
-      ,"username": "王勃"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "65"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10004"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "666"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10005"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "86"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10006"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "12"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10007"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "16"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }, {
-      "id": "10008"
-      ,"username": "贤心"
-      ,"email": "xianxin@layui.com"
-      ,"sex": "男"
-      ,"city": "浙江杭州"
-      ,"sign": "人生恰似一场修行"
-      ,"experience": "106"
-      ,"ip": "192.168.0.8"
-      ,"logins": "106"
-      ,"joinTime": "2016-10-14"
-    }]
-    //,skin: 'line' //表格风格
-    ,even: true
-    ,page: true //是否显示分页
-    //,limits: [5, 7, 10]
-    //,limit: 5 //每页默认显示的数量
-  });
-});
+            var table = layui.table;
+            
+            //展示已知数据
+            table.render({
+                elem: '#demo'
+                ,cols: [[ //标题栏
+                {field: 'check', title: '<input type="checkbox" name="" title="" lay-skin="primary">', width: 50, templet: '#test-table-checkBoxDome'}
+                ,{field: 'id', title: '用户ID', width: 100,}
+                ,{field: 'loginname', title: '登录名称', width: 200}
+                ,{field: 'username', title: '用户名称', minWidth: 150,width: 200}
+                ,{field: 'department', title: '部门', minWidth: 160,width: 200}
+                ,{field: 'phone', title: '手机', width: 200,minWidth: 140}
+                ,{field: 'userstatus', title: '用户状态', width: 135 ,templet: '#test-table-switch-barDemo'}
+                ,{field: 'creationtime', title: '创建时间', width: 200,}
+                ,{field: 'operating', title: '操作', width: 200, templet: '#test-table-operate-barDemo'}
+                ]]
+                ,data: [{
+                "check": ""
+                ,"id": "1"
+                ,"loginname": "admin"
+                ,"username": "若依"
+                ,"department": "研发部门"
+                ,"phone": "15888888888"
+                ,"userstatus": ""
+                ,"creationtime": "2018-03-16 11:33:00"
+                ,"operating": ""
+                
+                },]
+                //,skin: 'line' //表格风格
+                ,even: true
+                ,page: true //是否显示分页
+                //,limits: [5, 7, 10]
+                //,limit: 5 //每页默认显示的数量
+            });
+    });
 
         window.onload=function(){
         var aaa=document.getElementById('aa');
@@ -458,5 +367,64 @@
                     }
             }
         };
+    </script>
+    <script>
+        layui.use('tree', function(){
+          var tree = layui.tree;
+         
+          //渲染
+          var inst1 = tree.render({
+            elem: '#test1'  //绑定元素
+            ,data: [{
+              title: '若依科技' //一级菜单
+              ,children: [{
+                title: '深圳总公司' //二级菜单
+                ,children: [{
+                  title: '研发部门' //三级菜单
+
+                  //…… //以此类推，可无限层级
+                },
+                {
+                  title: '市场部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                },
+                {
+                  title: '测试部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                },
+                {
+                  title: '财务部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                },
+                {
+                  title: '运维部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                }]
+              },
+              {
+                title: '长沙分公司' //二级菜单
+                ,children: [{
+                  title: '市场部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                },
+                {
+                  title: '财务部门' //三级菜单
+                  //…… //以此类推，可无限层级
+                }]
+              }]
+            }]
+          });
+        });
+    </script>
+    <script type="text/html" id="test-table-operate-barDemo">
+        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <script type="text/html" id="test-table-switch-barDemo">
+        <input type="checkbox" name="xxx" lay-skin="switch">
+    </script>
+    <script type="text/html" id="test-table-checkBoxDome">
+        <input type="checkbox" name="" title="" lay-skin="primary">
     </script>
 </html>
